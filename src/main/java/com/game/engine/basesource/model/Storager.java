@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.game.engine.basesource.db.annotiation.BId;
 import com.game.engine.basesource.db.annotiation.BResource;
@@ -23,7 +22,7 @@ public class Storager<V> {
 	private Map<Object, V> table = new HashMap<>(0);
 	
 	/** 排好序的id列表*/
-	private List<Object> idList = new CopyOnWriteArrayList<>();
+	private List<Object> idList = new ArrayList<>(0);
 	
 	/**
 	 * 关闭该构造方法
